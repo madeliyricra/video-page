@@ -7,9 +7,9 @@ body{
     margin: 0;
 }
 .container{
-    background-color: #7378D9;
     width: 100%;
     height: 100vh;
+    background-color: rgba(115, 120, 217, 0.7);
 }
 .container__header{
     width: 100%;
@@ -17,14 +17,15 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #011526;
-    border-bottom: 4px solid #2B25D9;
+    /*border-bottom: 4px solid #2B25D9;*/
 }
 .header__img{
-    padding: 10px 20px 10px 20px ;
-    margin-left: 1.5em;
+    padding: 10px 30px 10px 30px ;
+    margin-left: 2em;
 }
 .header__menu{
     cursor: pointer;
+    margin-right: 20px;
     margin-top: 15px;
 }
 .header__menu ul{
@@ -60,26 +61,39 @@ body{
     margin-left: 10px;
     font-weight: 100;
 }
-.profile__img{
-    width: 40px;
-    height: 40px;
+.fa-user-circle{
+    font-size: 30px;
+    color: #7378D9;
+    padding: 5px;
 }
 /*------------main-----------*/
-.container_main{
-
+.banner{
+    width: 100%;
+    width: 100%;
+    height: 350px;
+    background-image: url('https://i.blogs.es/c76165/carteles-cine-terror/1366_2000.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-bottom: 4px solid #011526;
 }
-.main{
-    margin-top: 50px;
-    height: 300px;
+.banner__container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.main__title{
+.banner__title{
     text-align: center;
     color: #fff;
     font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 30px;
     font-family: 'Poiret One', cursive;
 }
-.main_search{
+.banner__search{
     display: inline-flex;
     font-size: 16px;
     height: 50px;
@@ -88,7 +102,7 @@ body{
     transition: all 0.5s;
     background-color: transparent;
 }
-.main_search .icon{
+.banner__search .icon{
     width: 8%;
     height: 100%;
     display: flex;
@@ -99,28 +113,124 @@ body{
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     border-left: 2px solid #fff;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(225, 225, 225, 0.8);
 }
-.main_search input{
+.banner__search input{
     width: 92%;
     height: 100%;
     outline: none;
     border:none;
     margin:0px;
     font-size: 16px;
-    color:#fff;
+    font-weight: bold;
+    color:rgb(105, 102, 102);
     padding: 0px 10px 0px 0px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(225, 225, 225, 0.8);
 }
 ::placeholder{
     color:#fff;
 }
 .fa-search{
-    color: #fff;
+    color: rgb(98, 97, 97);
+}
+/*--carousel-*/
+.carousel{
+    width: 100%;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+}
+/*---*/
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(115, 120, 217, 0.7);
+    border-radius: 5px;
 }
 
+.carousel::-webkit-scrollbar {
+    background-color: rgba(115, 120, 217, 0.7);
+}
+
+.carousel__title{
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ffffff;
+}
+.carousel__title h2{
+    padding: 0;
+    margin:30px 0 0 0;
+    color: #fff;
+}
+.carousel__container{
+    padding: 20px;
+    white-space: nowrap;
+    margin:40px 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.carousel-item{
+    position: relative;
+    background-color: thistle;
+    width: 200px;
+    height: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0 , 0);
+}
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}   
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.3);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 300px;
+    filter: saturate(70%);
+    object-fit: cover;
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 200px;
+    font-size: 10px;
+    color: #fff;
+    text-align: right;
+}
+.carousel-item__details:hover{
+    opacity: 1;
+}
+.carousel-item__details p{
+   margin: 0;
+}
+.carousel-item__details--title{
+    font-weight: bold;
+    font-size: 14px;
+}
+.fa-play-circle, .fa-plus-circle{
+    font-size: 20px;
+    color: #F2B077;
+    padding: 4px;
+}
