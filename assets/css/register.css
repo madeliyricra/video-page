@@ -1,0 +1,130 @@
+body{
+    background-image: url("./../img/back.png");
+     /* background: linear-gradient(#011526, #0c5494, #011526 ); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* opacity: 0.95; */
+}
+.container__header{
+    background-color: transparent;
+}
+.register{
+    /* background: linear-gradient(#403bced0, #7378D9 ); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 135px);
+    z-index: 2;
+}
+.register__container{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid rgb(139, 135, 135);
+    border-radius: 40px;
+    color: #fff;
+    padding: 60px 68px 40px;
+    width: 300px;
+    min-height: 600px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.register__container h2{
+    text-align: center;
+}
+.register__container img{
+    margin: 0 auto;
+    width: 150px;
+}
+.register__container--form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.register__container--login{
+   color: #fff;
+   font-size: 14px;
+   text-decoration: none;
+   text-align: center;
+}
+.register__container--login:hover{
+    text-decoration: underline;
+ }
+
+ .input{
+     background-color: transparent;
+     border-left: 0;
+     border-top: 0;
+     border-right: 0px;
+     border-bottom: 2px solid #fff;
+     outline: none;
+     color: #fff;
+     font-family: 'Mulish', sans-serif;
+     margin-bottom: 20px;
+     padding: 0 20px;
+     height: 50px;
+ }
+ ::placeholder{
+     color: #fff;
+ }
+ .button{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(37, 35, 35);
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+ }
+
+
+ .footer{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.footer a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width:600px){
+    /* .login{
+        width: 100%;
+        padding: 0;
+    } */
+    .register{
+        min-height: calc(100vh - 100px);
+    }
+    .container__header{
+        justify-content: center;
+    }
+    .register__container{
+        margin: 0 atuo;
+        border: none;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px;
+    }
+}
