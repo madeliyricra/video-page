@@ -1,0 +1,59 @@
+body{
+    /* background: linear-gradient(#2e1eb9da, #097ce0ce, #2742df ); */
+
+    background-color: rgb(36, 98, 212);
+    /* background-color: #fff; */
+}
+/*------------error----------*/
+.information{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: calc(100vh - 55px);
+}
+.container__information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+}
+.information--img{
+    width: 400px;
+    height: auto;
+}
+.information--title{
+    display: flex;
+    justify-content: center;
+}
+.information--title p{
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+}
+/*------animation----*/
+.animated{
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    margin-left: 5px;
+    margin-top: 0px;
+    font-size: 30px;
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+.information--link{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+.information--link:hover{
+    text-decoration: underline;
+}

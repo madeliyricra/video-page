@@ -86,24 +86,6 @@ body{
  }
 
 
- .footer{
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-}
-.footer a{
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    padding-left: 30px;
-}
-.footer a:hover{
-    text-decoration: underline;
-}
-
-
 @media only screen and (max-width:600px){
     /* .login{
         width: 100%;
